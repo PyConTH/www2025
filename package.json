@@ -1,0 +1,23 @@
+{
+  "name": "pycon-th-www-2025",
+  "version": "1.0.0",
+  "description": "Just a new website for upcoming PyCon TH in Winter 2025",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PyConTH/www2025.git"
+  },
+  "keywords": [
+    "PyCon",
+    "Thailand"
+  ],
+  "author": "Jirachai Chansivanon <jirachai.c@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PyConTH/www2025/issues"
+  },
+  "homepage": "https://github.com/PyConTH/www2025#readme"
+}

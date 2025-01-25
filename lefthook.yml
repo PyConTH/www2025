@@ -1,0 +1,22 @@
+# EXAMPLE USAGE:
+#
+#   Refer for explanation to following link:
+#   https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
+#
+pre-push:
+  parallel: true
+  commands:
+    packages-audit:
+      tags: security
+      run: npm audit
+
+pre-commit:
+  parallel: true
+  commands:
+    format:
+      exclude:
+        - package-lock.json
+      glob: "*.{js,mjs,ts,jsx,tsx,astro,css,scss,md,json,yml}"
+      run: |
+        npx prettier --write {staged_files}
+        npx prettier --check {staged_files}

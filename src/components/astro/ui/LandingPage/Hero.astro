@@ -3,6 +3,8 @@ import AnimatedHeadLine from "@components/react/ui/LandingPage/AnimatedHeadline"
 import AnimatedHeroSvgBottom from "@components/react/ui/LandingPage/AnimatedHeroSvg/AnimatedHeroSvgBottom";
 import AnimatedHeroSvgSideStar from "@components/react/ui/LandingPage/AnimatedHeroSvg/AnimatedHeroSvgSideStar";
 import AnimatedHeroSvgSideTukTuk from "@components/react/ui/LandingPage/AnimatedHeroSvg/AnimatedHeroSvgSideTukTuk";
+import { socials } from "@/constants";
+import { Icon } from "astro-icon/components";
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-5 min-h-[40vh]">
@@ -28,6 +30,25 @@ import AnimatedHeroSvgSideTukTuk from "@components/react/ui/LandingPage/Animated
             class="flex bg-header-orange text-white font-bold text-xl uppercase rounded-lg px-4 py-2"
           >
             Stay tuned for more!
+          </div>
+          <div class="flex text-lg mt-4">
+            In the meanwhile, check out our social media channels for updates.
+          </div>
+          <div class="md:flex flex gap-x-4 px-4 mt-4">
+            {
+              socials
+                .filter((social) => social.link !== "")
+                .map((social, index) => (
+                  <a href={social.link} target="_blank">
+                    <Icon
+                      name={social.icon}
+                      color={social.color}
+                      width={24}
+                      height={24}
+                    />
+                  </a>
+                ))
+            }
           </div>
         </div>
       </div>

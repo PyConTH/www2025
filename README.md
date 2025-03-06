@@ -1,6 +1,6 @@
 # TH PyCon 2025
 
-This is the repo that hosts the website of Thailand Python Conference for the year 2023.
+This is the repo that hosts the website of Thailand Python Conference for the year 2025.
 
 We use Astro to build this site. The deployment pipeline is configured on Netlify.
 

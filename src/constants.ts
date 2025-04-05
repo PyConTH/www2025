@@ -1,3 +1,7 @@
+export const imageBaseUrl = import.meta.env.APP_ENV
+  ? ".netlify/images?url="
+  : "";
+
 export const socials = [
   {
     icon: "logos:discord-icon",

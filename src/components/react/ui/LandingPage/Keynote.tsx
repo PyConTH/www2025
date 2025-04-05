@@ -1,5 +1,6 @@
-import { Icon } from "@iconify/react";
 import Heading2 from "@/components/react/ui/LandingPage/Heading2";
+import { imageBaseUrl } from "@/constants";
+import { Icon } from "@iconify/react";
 import { useRef, useState } from "react";
 
 type Speaker = {
@@ -79,24 +80,24 @@ const KeynoteSpeaker = ({
 
   return (
     <div className="col-span-3 grid grid-cols-10 gap-x-4 gap-y-8">
-      <div className="md:col-span-3 col-span-4">
+      <div className="col-span-4 md:col-span-3">
         <div
-          className="max-xl:h-32 max-xl:w-32 h-42 w-42 mx-auto rounded-full rounded-br-none overflow-hidden p-1"
+          className="h-42 w-42 mx-auto overflow-hidden rounded-full rounded-br-none p-1 max-xl:h-32 max-xl:w-32"
           style={{ background: color }}
         >
-          <div className="h-full w-full mx-auto rounded-full rounded-br-none overflow-hidden">
+          <div className="mx-auto h-full w-full overflow-hidden rounded-full rounded-br-none">
             <img
               className="w-full"
               width={200}
               height={200}
-              src={speaker.image}
+              src={imageBaseUrl + speaker.image}
               alt={speaker.name}
             />
           </div>
         </div>
       </div>
 
-      <div className="ml-4 inline-block md:col-span-7 col-span-full max-lg:mt-4">
+      <div className="col-span-full ml-4 inline-block max-lg:mt-4 md:col-span-7">
         {/* Content */}
 
         <div>
@@ -104,7 +105,7 @@ const KeynoteSpeaker = ({
             {speaker.name}
           </p>
 
-          <div className="mb-1 flex gap-x-2 text-xl items-center">
+          <div className="mb-1 flex items-center gap-x-2 text-xl">
             {displaySocial()}
           </div>
         </div>
@@ -115,10 +116,7 @@ const KeynoteSpeaker = ({
         {/* Session description */}
         <div
           onClick={() => setIsShowFullContent(!isShowFullContent)}
-          className={`
-              ${isShowFullContent ? "overflow-auto" : "overflow-clip"}
-                relative transition-all rounded-md group cursor-pointer
-              `}
+          className={` ${isShowFullContent ? "overflow-auto" : "overflow-clip"} group relative cursor-pointer rounded-md transition-all`}
           style={{
             maxHeight: isShowFullContent
               ? contentEL.current?.clientHeight
@@ -127,7 +125,7 @@ const KeynoteSpeaker = ({
         >
           <p
             ref={contentEL}
-            className="font-light relative"
+            className="relative font-light"
             dangerouslySetInnerHTML={{ __html: speaker.description }}
           ></p>
 
@@ -135,7 +133,7 @@ const KeynoteSpeaker = ({
             <button
               role="button"
               aria-label="Expand"
-              className="bg-black/5 backdrop-blur-md hover:bg-black/25 group-hover:bg-black/25 border-gray-400 border rounded-b-md text-slate-500 absolute bottom-0 left-0 w-full flex justify-center items-center cursor-pointer"
+              className="absolute bottom-0 left-0 flex w-full cursor-pointer items-center justify-center rounded-b-md border border-gray-400 bg-black/5 text-slate-500 backdrop-blur-md hover:bg-black/25 group-hover:bg-black/25"
             >
               <span className="hidden" aria-hidden="true">
                 Read more speaker description
@@ -167,12 +165,12 @@ export default function Keynote() {
   return (
     <div
       id="program"
-      className="flex flex-col text-black bg-slate-100 px-8 md:px-16 py-8"
+      className="flex flex-col bg-slate-100 px-8 py-8 text-black md:px-16"
     >
       <Heading2 title="Keynotes" />
 
       <div className="my-8">
-        <div className="grid lg:grid-cols-6 gap-x-4 gap-y-8 mt-8">
+        <div className="mt-8 grid gap-x-4 gap-y-8 lg:grid-cols-6">
           {listKeynote()}
         </div>
       </div>

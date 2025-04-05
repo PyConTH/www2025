@@ -130,7 +130,7 @@ const Navbar = () => {
   const PyConLogo = () => (
     <a href="/">
       <img
-        src="/images/common/pyconth2023_logo.svg"
+        src="/images/common/2025/pyconth_logo@2x.png"
         alt="PyCon Thailand 2023"
         className="h-12 inline-block"
       />

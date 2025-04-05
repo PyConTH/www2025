@@ -1,5 +1,6 @@
 ---
 import Sponsors from "@/components/astro/section/Sponsors.astro";
+import Keynote from "@components/react/ui/LandingPage/Keynote";
 import Layout from "../layouts/Layout.astro";
 
 import Hero from "@components/astro/ui/LandingPage/Hero.astro";
@@ -10,6 +11,7 @@ import Hero from "@components/astro/ui/LandingPage/Hero.astro";
     <div class="mx-auto w-full">
       <div class="flex flex-col justify-center mb-10">
         <Hero />
+        <Keynote client:load />
         <Sponsors />
       </div>
     </div>

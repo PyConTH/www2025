@@ -36,7 +36,7 @@ const HEADLINE: Array<HeadLine> = [
     iconAnimationDuration: "0.5s",
   },
   {
-    message: "CHIPI CHIPI CHAPA CHAPA DUBI DUBI DABA DABA",
+    message: "UIA UIA UIA UIA IIE ... UIAAA UIE UI A",
     iconName: "fluent-emoji:cat-face",
     iconAnimation: "animate-bounce",
     iconColor: "#faa",
@@ -51,14 +51,14 @@ const HEADLINE: Array<HeadLine> = [
     iconColor: "#aaa",
     iconAnimationDuration: "15s",
   },
-  {
-    message: "We wish you a happy new year.",
-    iconName: "solar:heart-bold",
-    iconAnimation: "animate-pulse",
-    iconColor: "#faa",
-    iconAnimationDuration: "1s",
-    bounce: false,
-  },
+  // {
+  //   message: "We wish you a happy new year.",
+  //   iconName: "solar:heart-bold",
+  //   iconAnimation: "animate-pulse",
+  //   iconColor: "#faa",
+  //   iconAnimationDuration: "1s",
+  //   bounce: false,
+  // },
   {
     message: "See you again in Q4/2025",
     iconName: "openmoji:motor-boat",

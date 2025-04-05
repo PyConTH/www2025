@@ -1,0 +1,2 @@
+[context.production]
+  environment = { APP_ENV = "prod" }

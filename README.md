@@ -22,12 +22,15 @@ mise install
 Then, install node dependencies with the usual
 `npm install`
 
+Do install pre-commit hook with `npm run pre-commit` to automatically format code
+
 Start a dev server with
 `npm run dev`
 
 Build the artifact with (verify locally for faster feedback)
 `npm run build`
 
-# More info on Astro website
+## Image transformations
 
-Feel free to check [our documentation](https://docs.astro.build)
+Check this document for available transformations available from Netlify
+https://docs.netlify.com/image-cdn/overview/#transform-images

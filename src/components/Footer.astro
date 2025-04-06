@@ -4,21 +4,21 @@ import { socials } from "@/constants";
 ---
 
 <footer
-  class="flex items-center justify-between relative bg-slate-100 sm:px-8 md:px-16 lg:px-16 pt-4 pb-32 overflow-clip"
+  class="relative flex items-center justify-between overflow-clip bg-slate-100 pb-32 pt-4 sm:px-8 md:px-16 lg:px-16"
 >
   <div class="flex-shrink p-4">
     <img
-      src="/images/common/pyconth2023_logo.svg"
+      src="/images/common/2025/pyconth_logo@2x.png"
       class="h-12"
       alt="Pycon Logo"
     />
   </div>
 
   <div class="max-sm:flex-col md:flex">
-    <div class="text-gray-400 text-center font-semibold px-4">
+    <div class="px-4 text-center font-semibold text-gray-400">
       © 2025. PyCon Thailand. All rights reserved.
     </div>
-    <div class="md:flex flex gap-x-4 px-4 max-md:mt-4">
+    <div class="flex gap-x-4 px-4 max-md:mt-4 md:flex">
       {
         socials
           .filter((social) => social.link !== "")
@@ -37,12 +37,12 @@ import { socials } from "@/constants";
   </div>
 
   <div
-    class="group text-center absolute w-full left-0 bottom-0 translate-y-8 hover:translate-y-0 hover:opacity-100 transition-all cursor-pointer"
+    class="group absolute bottom-0 left-0 w-full translate-y-8 cursor-pointer text-center transition-all hover:translate-y-0 hover:opacity-100"
   >
     <span class="text-6xl opacity-25 group-hover:hidden">🐍</span>
     <a
       href="https://youtu.be/kMwodsPwrSQ?t=8"
-      class="text-6xl group-hover:block group-hover:animate-bounce hidden"
+      class="hidden text-6xl group-hover:block group-hover:animate-bounce"
     >
       🐘
     </a>

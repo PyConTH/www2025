@@ -36,4 +36,8 @@ export const socials = [
     icon: "logos:facebook",
     link: "https://www.facebook.com/PyConThailand",
   },
+  {
+    icon: "skill-icons:instagram",
+    link: "https://www.instagram.com/pyconthailand",
+  },
 ];

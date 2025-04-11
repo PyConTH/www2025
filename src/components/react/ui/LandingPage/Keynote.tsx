@@ -88,9 +88,9 @@ const KeynoteSpeaker = ({
         >
           <div className="mx-auto h-full w-full overflow-hidden rounded-full rounded-br-none">
             <img
-              className="w-full"
+              className="h-[220px] w-full"
               width={200}
-              height={200}
+              height={220}
               src={imageBaseUrl + speaker.image}
               alt={speaker.name}
             />

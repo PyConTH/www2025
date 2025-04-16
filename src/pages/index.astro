@@ -4,14 +4,16 @@ import Keynote from "@components/react/ui/LandingPage/Keynote";
 import Layout from "../layouts/Layout.astro";
 
 import Hero from "@components/astro/ui/LandingPage/Hero.astro";
+import CallForProposal from "@/components/astro/section/CallForProposal.astro";
 ---
 
 <Layout title="Welcome to TH PyCon 2025!">
   <main>
     <div class="mx-auto w-full">
-      <div class="flex flex-col justify-center mb-10">
+      <div class="mb-10 flex flex-col justify-center">
         <Hero />
         <Keynote client:load />
+        <CallForProposal />
         <Sponsors />
       </div>
     </div>

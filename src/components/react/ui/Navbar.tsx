@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-import { navigate } from "astro:transitions/client";
 import { Icon } from "@iconify/react";
+import { navigate } from "astro:transitions/client";
+import BuyTicketButton from "../common/BuyTicketButton";
 
 type MenuType = {
   name: string;
@@ -96,12 +97,12 @@ const Navbar = () => {
       return (
         <div
           key={"menu-item-index-" + index}
-          className="dropdown lg:dropdown-end max-md:dropdown-bottom"
+          className="dropdown max-md:dropdown-bottom lg:dropdown-end"
         >
           {menu.link ? (
             <p
               onClick={() => navigateTo(menu.link)}
-              className="flex items-center justify-end gap-x-2 cursor-pointer"
+              className="flex cursor-pointer items-center justify-end gap-x-2"
             >
               {menu.name} {menu.subMenu && <Icon icon="uil:angle-down" />}
             </p>
@@ -117,7 +118,7 @@ const Navbar = () => {
           {menu.subMenu && (
             <ul
               tabIndex={0}
-              className="dropdown-content z-[256] menu p-2 mt-2 shadow bg-white rounded-box w-52"
+              className="menu dropdown-content z-[256] mt-2 w-52 rounded-box bg-white p-2 shadow"
             >
               {listSubMenu(menu.subMenu)}
             </ul>
@@ -132,15 +133,15 @@ const Navbar = () => {
       <img
         src="/images/common/2025/pyconth_logo@2x.png"
         alt="PyCon Thailand 2023"
-        className="h-12 inline-block"
+        className="inline-block h-12"
       />
     </a>
   );
 
   return (
-    <nav className="w-full px-4 xl:px-16 py-10 mx-auto top-0 left-0">
-      <div className="flex justify-between items-center flex-wrap">
-        <div className="max-lg:w-full inline-flex justify-between items-center">
+    <nav className="left-0 top-0 mx-auto w-full px-4 py-10 xl:px-16">
+      <div className="flex flex-wrap items-center justify-between">
+        <div className="inline-flex items-center justify-between max-lg:w-full">
           <PyConLogo />
 
           <div className="inline-block lg:hidden">
@@ -158,35 +159,21 @@ const Navbar = () => {
                 <Icon
                   icon={openMobileNav ? "mdi:close" : "mdi:menu"}
                   color="#000"
-                  className="w-8 h-8"
+                  className="h-8 w-8"
                 />
               </button>
             </div>
           </div>
         </div>
 
-        <div
-          className={`
-            text-black max-lg:hidden flex gap-x-8 items-center
-          `}
-        >
+        <div className={`flex items-center gap-x-8 text-black max-lg:hidden`}>
           {/* Menu render */}
           {listMenu()}
-          {/* TODO: Move to component? */}
-          {/* <a href='https://www.eventpop.me/e/15840'>
-            <button className='flex items-center ml-2 bg-primary text-white p-2 w-max'>
-              Buy Ticket <Icon className='ml-2' icon='ion:ticket-outline' />
-            </button>
-          </a> */}
+          <BuyTicketButton />
         </div>
 
         <div
-          className={`
-            text-black
-            ${openMobileNav ? "lg:hidden" : "hidden max-lg:py-0 border-b-0"}
-            border-b-2 border-pyconth-violet-600 transition-all
-            flex flex-col gap-x-8 py-4 gap-y-4 max-lg:w-full max-lg:items-center
-          `}
+          className={`text-black ${openMobileNav ? "lg:hidden" : "hidden border-b-0 max-lg:py-0"} flex flex-col gap-x-8 gap-y-4 border-b-2 border-pyconth-violet-600 py-4 transition-all max-lg:w-full max-lg:items-center`}
         >
           {/* Menu render */}
           {listMenu()}

@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { Icon } from "@iconify/react";
 import { navigate } from "astro:transitions/client";
+import BuyTicketButton from "../common/BuyTicketButton";
 
 type MenuType = {
   name: string;
@@ -168,12 +169,7 @@ const Navbar = () => {
         <div className={`flex items-center gap-x-8 text-black max-lg:hidden`}>
           {/* Menu render */}
           {listMenu()}
-          {/* TODO: Move to component? */}
-          {/* <a href='https://www.eventpop.me/e/15840'>
-            <button className='flex items-center ml-2 bg-primary text-white p-2 w-max'>
-              Buy Ticket <Icon className='ml-2' icon='ion:ticket-outline' />
-            </button>
-          </a> */}
+          <BuyTicketButton />
         </div>
 
         <div

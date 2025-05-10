@@ -15,7 +15,7 @@ const Conduct = () => {
   const languageSuffix = language === "en" ? "ภาษาไทย" : "English";
 
   useEffect(() => {
-    fetch(`markdown/conduct-${language}.md`)
+    fetch(`${window.location.origin}/markdown/conduct-${language}.md`)
       .then((response) => response.text())
       .then((text) => setMarkdown(text));
   }, [language]);

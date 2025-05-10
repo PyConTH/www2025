@@ -1,0 +1,15 @@
+---
+import Conduct from "@components/react/ui/Conduct/Conduct.tsx";
+import Layout from "../layouts/Layout.astro";
+import Hero from "@components/astro/ui/LandingPage/Hero.astro";
+---
+
+<Layout title="Code of Conduct">
+  <main>
+    <div class="mx-auto w-full">
+      <div class="mb-10 flex flex-col justify-center">
+        <Conduct client:load />
+      </div>
+    </div>
+  </main>
+</Layout>

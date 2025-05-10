@@ -12,15 +12,15 @@ type MenuType = {
 };
 
 const menus: MenuType[] = [
-  // {
-  //   name: 'About',
-  //   subMenu: [
-  //     {
-  //       name: 'Code of conduct',
-  //       link: '/conduct',
-  //     },
-  //   ],
-  // },
+  {
+    name: "About",
+    subMenu: [
+      {
+        name: "Code of conduct",
+        link: "/conduct",
+      },
+    ],
+  },
   // {
   //   name: 'Program',
   //   hrefLink: '/#program',

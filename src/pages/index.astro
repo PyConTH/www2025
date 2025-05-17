@@ -5,6 +5,7 @@ import Layout from "../layouts/Layout.astro";
 
 import Hero from "@components/astro/ui/LandingPage/Hero.astro";
 import CallForProposal from "@/components/astro/section/CallForProposal.astro";
+import OurTeam from "@/components/astro/section/OurTeam.astro";
 ---
 
 <Layout title="Welcome to TH PyCon 2025!">
@@ -15,9 +16,10 @@ import CallForProposal from "@/components/astro/section/CallForProposal.astro";
         <Keynote client:load />
         <CallForProposal />
         <Sponsors />
+        <OurTeam />
       </div>
     </div>
   </main>
-</Layout>
 
-<style></style>
+  <style></style>
+</Layout>

@@ -1,0 +1,118 @@
+---
+import { Image } from "astro:assets";
+import { TeamData } from "@assets/teams/data";
+import { imageBaseUrl } from "@/constants";
+
+// Define colors array
+const colorsFull = [
+  "#00B4D5",
+  "#00CE7F",
+  "#F8572B",
+  "#EF82EB",
+  "#FF9934",
+  "#5F01D1",
+  "#075A82",
+  "#00CE7F",
+  "#F8572B",
+  "#FF9934",
+  "#00B4D5",
+  "#5F01D1",
+  "#EF82EB",
+  "#00CE7F",
+  "#FF9934",
+  "#075A82",
+  "#5F01D1",
+];
+
+const imageTransformationString = "&h=200";
+
+// Split teams for the two rows
+const topTeams = TeamData.slice(0, 3);
+const bottomTeams = TeamData.slice(3);
+---
+
+<div class="flex flex-col justify-between bg-white px-4 py-8 md:px-8">
+  <div class="mb-8 flex flex-col items-end gap-y-4 px-2 py-4 md:py-16">
+    <div
+      class="bg-header-orange ml-2 flex h-24 w-64 items-center justify-center p-2 text-4xl font-extrabold uppercase leading-10 tracking-tighter text-white"
+    >
+      Our Team
+    </div>
+  </div>
+
+  <div class="grid w-full grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-4">
+    {
+      topTeams.map((team, index) => (
+        <div
+          class={`w-full ${team.desc ? "tooltip tooltip-primary" : ""}`}
+          data-tip={team.desc}
+          style={`color: ${colorsFull[index]}`}
+        >
+          <div class="avatar">
+            <div class="h-[200px] rounded-full lg:h-[280px]">
+              <Image
+                src={team.image}
+                alt={team.name}
+                height={280}
+                width={280}
+              />
+            </div>
+          </div>
+          <div class="py-4">
+            <p class="text-xl font-semibold max-md:text-base max-sm:text-sm">
+              {team.name}
+            </p>
+            <p
+              class="mb-2 text-lg font-medium max-md:text-sm max-sm:text-xs"
+              style="color: #A7ADB9"
+            >
+              {team.role}
+            </p>
+            <p class="mb-2 text-lg font-medium text-black max-md:text-sm max-sm:text-xs">
+              {team.title}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="grid w-full grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-4">
+    {
+      bottomTeams.map((team, index) => (
+        <div
+          class={`flex w-full flex-col items-center ${team.desc ? "tooltip tooltip-primary" : ""}`}
+          data-tip={team.desc}
+          style={`color: ${colorsFull[index + 3]}`}
+        >
+          {team?.image && (
+            <div class="avatar">
+              <div class="h-[200px] rounded-full lg:h-[280px]">
+                <Image
+                  src={team.image}
+                  alt={team.name}
+                  height={280}
+                  width={280}
+                />
+              </div>
+            </div>
+          )}
+          <div class="py-4">
+            <p class="text-center text-sm font-semibold max-md:text-base max-sm:text-sm">
+              {team.name}
+            </p>
+            <p
+              class="mb-2 text-center text-lg font-medium max-md:text-sm max-sm:text-xs"
+              style="color: #A7ADB9"
+            >
+              {team.role}
+            </p>
+            <p class="mb-2 text-center text-lg font-medium text-black max-md:text-sm max-sm:text-xs">
+              {team.title}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

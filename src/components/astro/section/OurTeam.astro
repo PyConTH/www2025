@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import { TeamData } from "@assets/teams/data";
-import { imageBaseUrl } from "@/constants";
 
 // Define colors array
 const colorsFull = [
@@ -23,8 +22,6 @@ const colorsFull = [
   "#075A82",
   "#5F01D1",
 ];
-
-const imageTransformationString = "&h=200";
 
 // Split teams for the two rows
 const topTeams = TeamData.slice(0, 3);

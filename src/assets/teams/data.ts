@@ -110,7 +110,7 @@ export const TeamData = [
     name: "Jirachai Chansivanon",
     role: "Tech",
     image: JirachaiImage,
-    title: "",
+    title: "Consulting Engineer at MongoDB Singapore",
     desc: "",
   },
 ];

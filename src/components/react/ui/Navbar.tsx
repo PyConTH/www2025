@@ -146,12 +146,7 @@ const Navbar = () => {
 
           <div className="inline-block lg:hidden">
             <div className="flex">
-              {/* TODO: Move to component? */}
-              {/* <a href='https://www.eventpop.me/e/15840'>
-                <button className='flex items-center ml-2 bg-primary text-white p-2 w-max'>
-                  Buy Ticket <Icon className='ml-2' icon='ion:ticket-outline' />
-                </button>
-              </a> */}
+              <BuyTicketButton />
               <button
                 className="flex items-center px-3 py-2"
                 onClick={toggleOpenMobileNav}

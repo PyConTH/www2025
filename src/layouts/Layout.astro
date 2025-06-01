@@ -22,6 +22,26 @@ const { title } = Astro.props;
       content="All about Python conference in Thailand 2025"
     />
     <meta name="viewport" content="width=device-width" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://th.pycon.org/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Welcome to TH PyCon 2025!" />
+    <meta
+      property="og:description"
+      content="All about Python conference in Thailand 2025"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="th.pycon.org" />
+    <meta property="twitter:url" content="https://th.pycon.org/" />
+    <meta name="twitter:title" content="Welcome to TH PyCon 2025!" />
+    <meta
+      name="twitter:description"
+      content="All about Python conference in Thailand 2025"
+    />
+
     <link rel="icon" href="/favicon.ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,12 +53,13 @@ const { title } = Astro.props;
       rel="stylesheet"
     />
 
-    <meta name="generator" content={Astro.generator} />
+    <!-- <meta name="generator" content={Astro.generator} /> -->
+
     <title>{title}</title>
   </head>
   <body>
     <div class="h-screen">
-      <div class="bg-white flex flex-col h-full container mx-auto relative">
+      <div class="container relative mx-auto flex h-full flex-col bg-white">
         <!-- {!props.hideNavbar && <Navbar />} -->
         <NavbarReact client:load />
         <!-- <Navbar/> -->

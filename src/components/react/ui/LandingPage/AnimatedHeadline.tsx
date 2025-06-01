@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
-import Highlight from "react-highlight";
 import "highlight.js/styles/github.css";
+import { useCallback, useEffect, useState } from "react";
+import Highlight from "react-highlight";
 
 type HeadLine = {
   message: string;
@@ -42,7 +42,7 @@ const HEADLINE: Array<HeadLine> = [
     iconColor: "#faa",
     iconAnimationDuration: "1s",
     bounce: true,
-    link: "https://www.youtube.com/embed/wh9QLjk3M2k?si=4unUv3bo7vsV1f5-&autoplay=1",
+    // link: "https://www.youtube.com/embed/wh9QLjk3M2k?si=4unUv3bo7vsV1f5-&autoplay=1",
   },
   {
     message: "from around_the_world import Python_Developer",
@@ -306,7 +306,7 @@ const AnimatedHeadLine = () => {
   }, [headLineIndex, animate, isAnimating]);
 
   return (
-    <div className={"text-3xl lg:text-4xl font-black"}>
+    <div className={"text-3xl font-black lg:text-4xl"}>
       {/* <div>
         <p className="text-sm">isTyping: {isTyping.toString()}</p>
         <p className="text-sm">isEndOfTextRound: {isEndOfTextRound.toString()}</p>
@@ -316,10 +316,7 @@ const AnimatedHeadLine = () => {
       </div> */}
 
       <div
-        className={`
-          flex flex-row flex-wrap text-black py-4 flex-1
-          ${link !== null ? "cursor-pointer hover:underline" : ""}
-        `}
+        className={`flex flex-1 flex-row flex-wrap py-4 text-black ${link !== null ? "cursor-pointer hover:underline" : ""} `}
         onClick={() => {
           if (link !== null) {
             window.open(link, "_blank");
@@ -328,11 +325,11 @@ const AnimatedHeadLine = () => {
       >
         <Highlight
           innerHTML={false}
-          className="python whitespace-pre-wrap text-3xl max-md:text-3xl !w-fit !bg-transparent !px-0"
+          className="python !w-fit whitespace-pre-wrap !bg-transparent !px-0 text-3xl max-md:text-3xl"
         >
           {text + "_"}
         </Highlight>
-        <div className="flex-1 flex">
+        <div className="flex flex-1">
           {isWaiting && showIcon()}
           {/* <span className="text-white bg-black w-6 text-3xl inline-block animate-pulse" style={{ animationDuration: '0.5s' }}>&nbsp;</span> */}
         </div>

@@ -11,6 +11,9 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+const pyconLogoUrl =
+  "https://th.pycon.org/images/common/2025/pyconth_logo@1x.png";
 ---
 
 <!doctype html>
@@ -22,6 +25,34 @@ const { title } = Astro.props;
       content="All about Python conference in Thailand 2025"
     />
     <meta name="viewport" content="width=device-width" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://th.pycon.org/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:site_name" content="TH PyCon 2025!" />
+    <meta
+      property="og:description"
+      content="All about Python conference in Thailand 2025"
+    />
+    <meta property="og:image" content={pyconLogoUrl} />
+    <meta property="og:image:width" content="643" />
+    <meta property="og:image:height" content="256" />
+    <meta property="og:image:type" content="image/png" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- TODO: This should be replaced with Twitter account if available -->
+    <meta property="twitter:domain" content="th.pycon.org" />
+    <meta property="twitter:url" content="https://th.pycon.org/" />
+    <meta name="twitter:title" content={title} />
+    <meta
+      name="twitter:description"
+      content="All about Python conference in Thailand 2025"
+    />
+    <meta name="twitter:image" content={pyconLogoUrl} />
+    <meta name="twitter:image:alt" content="PyCon Thailand Logo" />
+
     <link rel="icon" href="/favicon.ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,12 +64,13 @@ const { title } = Astro.props;
       rel="stylesheet"
     />
 
-    <meta name="generator" content={Astro.generator} />
+    <!-- <meta name="generator" content={Astro.generator} /> -->
+
     <title>{title}</title>
   </head>
   <body>
     <div class="h-screen">
-      <div class="bg-white flex flex-col h-full container mx-auto relative">
+      <div class="container relative mx-auto flex h-full flex-col bg-white">
         <!-- {!props.hideNavbar && <Navbar />} -->
         <NavbarReact client:load />
         <!-- <Navbar/> -->

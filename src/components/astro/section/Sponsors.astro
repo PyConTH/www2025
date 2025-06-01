@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import PSFLogo from "@assets/sponsors/psf-logo.webp";
 import BankOfAgricultureLogo from "@assets/sponsors/bank_of_agriculture.webp";
 import DataRockieLogo from "@assets/sponsors/data-rockie.webp";
 ---
@@ -10,6 +11,20 @@ import DataRockieLogo from "@assets/sponsors/data-rockie.webp";
   <div class="card w-56 bg-base-100 shadow-xl">
     <figure class="p-5">
       <img src="/images/sponsors/ODDS.png" alt="ODDS Logo" />
+    </figure>
+  </div>
+
+  <h2 class="mb-4 mt-10 text-center text-2xl font-semibold text-primary">
+    Python Software Foundation
+  </h2>
+  <div class="card w-72 bg-base-100 shadow-xl">
+    <figure class="p-5">
+      <Image
+        src={PSFLogo}
+        height={150}
+        class="items-center"
+        alt="Python Software Foundation Logo"
+      />
     </figure>
   </div>
 

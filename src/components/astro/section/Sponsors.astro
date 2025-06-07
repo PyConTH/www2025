@@ -3,12 +3,13 @@ import { Image } from "astro:assets";
 import PSFLogo from "@assets/sponsors/psf-logo.webp";
 import BankOfAgricultureLogo from "@assets/sponsors/bank_of_agriculture.webp";
 import DataRockieLogo from "@assets/sponsors/data-rockie.webp";
+import EventPopLogo from "@assets/sponsors/eventpop_primary_RGB.webp";
 ---
 
 <div id="sponsor" class="flex flex-col items-center px-8 md:px-0">
   <h2 class="mt-20 text-3xl font-semibold text-primary">Sponsors / Partners</h2>
   <h2 class="mb-4 mt-10 text-2xl font-semibold text-primary">Headline</h2>
-  <div class="card w-56 bg-base-100 shadow-xl">
+  <div class="card w-56 bg-base-100">
     <figure class="p-5">
       <img src="/images/sponsors/ODDS.png" alt="ODDS Logo" />
     </figure>
@@ -17,7 +18,7 @@ import DataRockieLogo from "@assets/sponsors/data-rockie.webp";
   <h2 class="mb-4 mt-10 text-center text-2xl font-semibold text-primary">
     Python Software Foundation
   </h2>
-  <div class="card w-72 bg-base-100 shadow-xl">
+  <div class="card w-72 bg-base-100">
     <figure class="p-5">
       <Image
         src={PSFLogo}
@@ -30,7 +31,7 @@ import DataRockieLogo from "@assets/sponsors/data-rockie.webp";
 
   <h2 class="mb-4 mt-10 text-2xl font-semibold text-primary">Silver</h2>
   <div class="flex items-center gap-x-4 max-md:flex-col">
-    <div class="card w-56 bg-white shadow-xl">
+    <div class="card w-56 bg-white">
       <figure class="my-4 p-5">
         <Image
           src={DataRockieLogo}
@@ -45,7 +46,7 @@ import DataRockieLogo from "@assets/sponsors/data-rockie.webp";
   <h2 class="mb-4 mt-10 text-2xl font-semibold text-primary">Patron</h2>
 
   <div class="flex items-center gap-x-4 max-md:flex-col">
-    <div class="card w-56 bg-white shadow-xl">
+    <div class="card w-56 bg-white">
       <figure class="my-4 p-5">
         <Image
           src={BankOfAgricultureLogo}
@@ -55,5 +56,17 @@ import DataRockieLogo from "@assets/sponsors/data-rockie.webp";
         />
       </figure>
     </div>
+    <!-- Start : Event Pop -->
+    <div class="card w-56 bg-white">
+      <figure class="my-4 p-5">
+        <Image
+          src={EventPopLogo}
+          class="items-center"
+          height={150}
+          alt="Event Pop Logo"
+        />
+      </figure>
+    </div>
+    <!-- End : Event Pop -->
   </div>
 </div>

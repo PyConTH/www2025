@@ -46,7 +46,7 @@ const bottomTeams = TeamData.slice(3);
           style={`color: ${colorsFull[index]}`}
         >
           <div class="avatar">
-            <div class="h-[200px] rounded-full lg:h-[280px]">
+            <div class="max-h-[200px] rounded-full lg:max-h-[280px]">
               <Image
                 src={team.image}
                 alt={team.name}
@@ -84,7 +84,7 @@ const bottomTeams = TeamData.slice(3);
         >
           {team?.image && (
             <div class="avatar">
-              <div class="h-[200px] rounded-full lg:h-[280px]">
+              <div class="max-h-[200px] rounded-full lg:max-h-[280px]">
                 <Image
                   src={team.image}
                   alt={team.name}

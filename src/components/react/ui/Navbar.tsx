@@ -25,10 +25,10 @@ const menus: MenuType[] = [
   //   name: 'Program',
   //   hrefLink: '/#program',
   // },
-  // {
-  //   name: 'Schedule',
-  //   link: '/schedule',
-  // },
+  {
+    name: "Schedule",
+    link: "/schedule",
+  },
   // {
   //   name: 'Venue',
   //   link: '/venue',
@@ -37,10 +37,10 @@ const menus: MenuType[] = [
   //   name: 'Sponsor',
   //   hrefLink: '/#sponsor',
   // },
-  // {
-  //   name: 'Speakers',
-  //   hrefLink: '/speakers',
-  // },
+  {
+    name: "Speakers",
+    hrefLink: "/speakers",
+  },
   {
     name: "Previous",
     subMenu: [

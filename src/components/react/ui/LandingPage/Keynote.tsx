@@ -163,6 +163,7 @@ export default function Keynote() {
     });
   };
 
+  // @ts-ignore
   return (
     <div
       id="program"
@@ -174,6 +175,11 @@ export default function Keynote() {
         <div className="mt-8 grid gap-x-4 gap-y-8 lg:grid-cols-6">
           {listKeynote()}
         </div>
+        <h3 className="mt-12 text-center text-xl">
+          <a href="/speakers" className="text-[#00B4D5] underline">
+            AND... MORE SPEAKERS
+          </a>
+        </h3>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { TeamData } from "@assets/teams/data";
+import { CfPReviewerTeamData } from "../../../assets/teams/cfp-reviewer";
 
 // Define colors array
 const colorsFull = [
@@ -26,6 +27,7 @@ const colorsFull = [
 // Split teams for the two rows
 const topTeams = TeamData.slice(0, 3);
 const bottomTeams = TeamData.slice(3);
+const cfPReviewerTeam = CfPReviewerTeamData;
 ---
 
 <div class="flex flex-col justify-between bg-white px-4 py-8 md:px-8">
@@ -106,6 +108,44 @@ const bottomTeams = TeamData.slice(3);
             </p>
             <p class="mb-2 text-center text-lg font-medium text-black max-md:text-sm max-sm:text-xs">
               {team.title}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <div class="mb-8 flex flex-col items-end gap-y-4 px-2 py-4 md:py-16">
+    <div
+      class="bg-header-orange ml-2 flex h-12 w-64 items-center justify-center p-2 text-xl font-extrabold uppercase leading-10 tracking-tighter text-white"
+    >
+      Proposal Reviewers
+    </div>
+  </div>
+  <div class="grid w-full grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-4">
+    {
+      cfPReviewerTeam.map((cfpTeam, index) => (
+        <div
+          class={`flex w-full flex-col items-center`}
+          style={`color: ${colorsFull[index + 3]}`}
+        >
+          {cfpTeam?.image && (
+            <div class="avatar">
+              <div class="max-h-[200px] rounded-full lg:max-h-[280px]">
+                <Image
+                  src={cfpTeam.image}
+                  alt={cfpTeam.name}
+                  height={280}
+                  width={280}
+                />
+              </div>
+            </div>
+          )}
+          <div class="py-4">
+            <p class="text-center text-sm font-semibold max-md:text-base max-sm:text-sm">
+              {cfpTeam.name}
+            </p>
+            <p class="mb-2 text-center text-lg font-medium text-black max-md:text-sm max-sm:text-xs">
+              {cfpTeam.title}
             </p>
           </div>
         </div>

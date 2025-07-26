@@ -1,7 +1,6 @@
 import IceImage from "@assets/teams/images/ice.jpg";
 import JamesImage from "@assets/teams/images/james.jpeg";
 import JirachaiImage from "@assets/teams/images/jirachai.jpg";
-import KaewImage from "@assets/teams/images/kaew.png";
 import NatworpongImage from "@assets/teams/images/natworpong.jpg";
 import NuttakitImage from "@assets/teams/images/nuttakit.jpg";
 import PanthipaImage from "@assets/teams/images/panthipa.jpg";
@@ -9,7 +8,6 @@ import PeeImage from "@assets/teams/images/pee.jpeg";
 import PhantipImage from "@assets/teams/images/phantip.jpg";
 import PhatchanyaImage from "@assets/teams/images/phatchanya.jpg";
 import PhattaradaImage from "@assets/teams/images/phattarada.png";
-import PitiImage from "@assets/teams/images/piti.jpeg";
 import SiriwimonImage from "@assets/teams/images/siriwimon-profile.jpeg";
 import SudaratImage from "@assets/teams/images/sudarat.jpeg";
 
@@ -34,20 +32,6 @@ export const TeamData = [
     image: JamesImage,
     title: "PhD Student at The University of Melbourne",
     desc: "Kanin is general practitioner of PyCon Thailand. While he is PhD student at the University of Melbourne.",
-  },
-  {
-    name: "Manussanun Buranachokphaisan",
-    role: "CFP Commitee",
-    image: KaewImage,
-    title: "Lead Data & AI at Investic",
-    desc: "",
-  },
-  {
-    name: "Piti Champeethong",
-    role: "CFP commitee.",
-    image: PitiImage,
-    title: "Senior consulting engineer at MongoDB Singapore",
-    desc: "Piti is a CFP committee of PyCon Thailand. At the same time, he is a Microsoft MVP in Developer Technologies.\nPlease connect with him at https://www.linkedin.com/in/pitichampeethong/",
   },
   {
     name: "Ice Peeranat",

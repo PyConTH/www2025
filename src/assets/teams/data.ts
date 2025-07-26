@@ -113,4 +113,12 @@ export const TeamData = [
     title: "Consulting Engineer at MongoDB Singapore",
     desc: "",
   },
+  {
+    name: "Kirin, Chakhriya",
+    role: "Core Team",
+    image:
+      "https://media.licdn.com/dms/image/v2/C4D03AQG-eR7MLFj1KQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1655301282208?e=1753920000&v=beta&t=Kkav1ypetPCspMpCX934YUZwNW30u_dT95ZT7iQjAR8",
+    title: "Student",
+    desc: "Kirin is a final-year university student who loves to explore new things.",
+  },
 ];

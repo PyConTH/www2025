@@ -12,6 +12,7 @@ const patrons = [
   {
     name: "Bank of Agriculture",
     logo: BankOfAgricultureLogo,
+    height: 100,
   },
   {
     name: "Event Pop",
@@ -105,7 +106,7 @@ const patrons = [
           <figure class="my-4 p-5">
             <Image
               src={patron.logo}
-              height={150}
+              height={patron?.height ?? 150}
               class="items-center"
               alt={`${patron.name} Logo`}
             />

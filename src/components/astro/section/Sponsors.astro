@@ -4,7 +4,28 @@ import PSFLogo from "@assets/sponsors/psf-logo.webp";
 import BankOfAgricultureLogo from "@assets/sponsors/bank_of_agriculture.webp";
 import DataRockieLogo from "@assets/sponsors/data-rockie.webp";
 import EventPopLogo from "@assets/sponsors/eventpop_primary_RGB.webp";
+import ThaiProgrammerAssociationLogo from "@assets/sponsors/ThaiProgrammerAssociation.svg";
+import MicrosoftLogo from "@assets/sponsors/Microsoft.webp";
 import LineSeparator from "@/components/react/ui/LineSeparator";
+
+const patrons = [
+  {
+    name: "Bank of Agriculture",
+    logo: BankOfAgricultureLogo,
+  },
+  {
+    name: "Event Pop",
+    logo: EventPopLogo,
+  },
+  {
+    name: "Thai Programmer Association",
+    logo: ThaiProgrammerAssociationLogo,
+  },
+  {
+    name: "Microsoft",
+    logo: MicrosoftLogo,
+  },
+];
 ---
 
 <div id="sponsor" class="flex flex-col items-center px-8 md:px-0">
@@ -78,27 +99,19 @@ import LineSeparator from "@/components/react/ui/LineSeparator";
   <!-- End: Sponsor rank -->
 
   <div class="flex items-center gap-x-4 max-md:flex-col">
-    <div class="card w-56 bg-white">
-      <figure class="my-4 p-5">
-        <Image
-          src={BankOfAgricultureLogo}
-          class="items-center"
-          height={150}
-          alt="BankOfAgricultureLogo"
-        />
-      </figure>
-    </div>
-    <!-- Start : Event Pop -->
-    <div class="card w-56 bg-white">
-      <figure class="my-4 p-5">
-        <Image
-          src={EventPopLogo}
-          class="items-center"
-          height={150}
-          alt="Event Pop Logo"
-        />
-      </figure>
-    </div>
-    <!-- End : Event Pop -->
+    {
+      patrons.map((patron) => (
+        <div class="card w-56 bg-white">
+          <figure class="my-4 p-5">
+            <Image
+              src={patron.logo}
+              height={150}
+              class="items-center"
+              alt={`${patron.name} Logo`}
+            />
+          </figure>
+        </div>
+      ))
+    }
   </div>
 </div>

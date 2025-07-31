@@ -6,31 +6,37 @@ import DataRockieLogo from "@assets/sponsors/data-rockie.webp";
 import EventPopLogo from "@assets/sponsors/eventpop_primary_RGB.webp";
 import ThaiProgrammerAssociationLogo from "@assets/sponsors/ThaiProgrammerAssociation.svg";
 import MicrosoftLogo from "@assets/sponsors/Microsoft.webp";
-import NattawatLogo from "@assets/sponsors/nattawat.jpg";
+import NattawatLogo from "@assets/sponsors/nattawat.png";
 import LineSeparator from "@/components/react/ui/LineSeparator";
+import OddsLogo from "@assets/sponsors/ODDS.png";
 
 const patrons = [
   {
     name: "Bank of Agriculture",
     logo: BankOfAgricultureLogo,
     height: 100,
+    url: "https://www.baac.or.th",
   },
   {
     name: "Event Pop",
     logo: EventPopLogo,
+    url: "https://www.eventpop.me",
   },
   {
     name: "Thai Programmer Association",
     logo: ThaiProgrammerAssociationLogo,
+    url: "https://thaiprogrammer.org",
   },
   {
     name: "Microsoft",
     logo: MicrosoftLogo,
+    url: "https://www.microsoft.com",
   },
   {
     name: "Nattawat",
     logo: NattawatLogo,
     height: 100,
+    url: "https://nattawatt.com",
   },
 ];
 ---
@@ -49,7 +55,9 @@ const patrons = [
   <!-- Start : ODDS -->
   <div class="card w-56 bg-base-100">
     <figure class="p-5">
-      <img src="/images/sponsors/ODDS.png" alt="ODDS Logo" />
+      <a href="https://odds.team" target="_blank" rel="noopener noreferrer">
+        <Image src={OddsLogo} alt="ODDS Logo" />
+      </a>
     </figure>
   </div>
   <!-- End : ODDS -->
@@ -66,12 +74,18 @@ const patrons = [
   <!-- Start : Python Software Foundation -->
   <div class="card w-72 bg-base-100">
     <figure class="p-5">
-      <Image
-        src={PSFLogo}
-        height={150}
-        class="items-center"
-        alt="Python Software Foundation Logo"
-      />
+      <a
+        href="https://www.python.org/psf-landing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={PSFLogo}
+          height={150}
+          class="items-center"
+          alt="Python Software Foundation Logo"
+        />
+      </a>
     </figure>
   </div>
   <!-- End : Python Software Foundation -->
@@ -87,12 +101,18 @@ const patrons = [
   <div class="flex items-center gap-x-4 max-md:flex-col">
     <div class="card w-56 bg-white">
       <figure class="my-4 p-5">
-        <Image
-          src={DataRockieLogo}
-          height={150}
-          class="items-center"
-          alt="DataRockie"
-        />
+        <a
+          href="https://datarockie.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src={DataRockieLogo}
+            height={150}
+            class="items-center"
+            alt="DataRockie"
+          />
+        </a>
       </figure>
     </div>
   </div>
@@ -107,18 +127,29 @@ const patrons = [
 
   <div class="flex items-center gap-x-4 max-md:flex-col">
     {
-      patrons.map((patron) => (
-        <div class="card w-56 bg-white">
-          <figure class="my-4 p-5">
-            <Image
-              src={patron.logo}
-              height={patron?.height ?? 150}
-              class="items-center"
-              alt={`${patron.name} Logo`}
-            />
-          </figure>
-        </div>
-      ))
+      patrons.map((patron) => {
+        const image = (
+          <Image
+            src={patron.logo}
+            height={patron?.height ?? 150}
+            class="items-center"
+            alt={`${patron.name} Logo`}
+          />
+        );
+        return (
+          <div class="card w-56 bg-white">
+            <figure class="my-4 p-5">
+              {patron.url ? (
+                <a href={patron.url} target="_blank" rel="noopener noreferrer">
+                  {image}
+                </a>
+              ) : (
+                <>{image}</>
+              )}
+            </figure>
+          </div>
+        );
+      })
     }
   </div>
 </div>

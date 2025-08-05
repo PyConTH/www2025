@@ -6,6 +6,7 @@ import KeanFahImage from "@assets/teams/images/keanfah.png";
 import KirinImage from "@assets/teams/images/kirin.jpeg";
 import NatworpongImage from "@assets/teams/images/natworpong.jpg";
 import NuttakitImage from "@assets/teams/images/nuttakit.jpg";
+import OrathaiImage from "@assets/teams/images/Orthai.jpeg";
 import PanthipaImage from "@assets/teams/images/panthipa.jpg";
 import PeeImage from "@assets/teams/images/pee.jpeg";
 import PhantipImage from "@assets/teams/images/phantip.jpg";
@@ -127,6 +128,13 @@ export const TeamData = [
     role: "Special Project",
     image: KasipatImage,
     title: "Vice President - Thailand - United States Alumni Association",
+    desc: "",
+  },
+  {
+    name: "Orthai Manatthaworn",
+    role: "Special Project",
+    image: OrathaiImage,
+    title: "Policy Analyst, Ministry of Commerce Thailand",
     desc: "",
   },
 ];

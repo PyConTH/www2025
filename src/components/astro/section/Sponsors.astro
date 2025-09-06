@@ -11,6 +11,8 @@ import LineSeparator from "@/components/react/ui/LineSeparator";
 import OddsLogo from "@assets/sponsors/ODDS.png";
 import SukjaiLogo from "@assets/sponsors/sukjai.jpg";
 import MyOrderLogo from "@assets/sponsors/myorder.webp";
+import CreatorsGartenLogo from "@assets/sponsors/creatorsgarten.svg";
+import PacktLogo from "@assets/sponsors/packtpublishing.png";
 
 const patrons = [
   {
@@ -44,6 +46,12 @@ const patrons = [
     name: "Sukjai Lab",
     height: 100,
     logo: SukjaiLogo,
+  },
+  {
+    name: "PacktLogo",
+    logo: PacktLogo,
+    height: 100,
+    url: "https://www.packtpub.com",
   },
 ];
 ---
@@ -96,6 +104,33 @@ const patrons = [
     </figure>
   </div>
   <!-- End : Python Software Foundation -->
+
+  <!-- Start: Sponsor rank -->
+  <div class="mb-4 mt-10 flex flex-col">
+    <h2 class="text-center text-2xl font-semibold text-primary">Gold</h2>
+    <!-- Separator animation -->
+    <LineSeparator client:load />
+  </div>
+  <!-- End: Sponsor rank -->
+
+  <!-- Start : Creatorsgarten -->
+  <div class="card w-56 bg-base-100">
+    <figure class="p-5">
+      <a
+        href="https://creatorsgarten.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={CreatorsGartenLogo}
+          height={100}
+          class="items-center"
+          alt="Creatorsgarten Logo"
+        />
+      </a>
+    </figure>
+  </div>
+  <!-- End : Creatorsgartenn -->
 
   <!-- Start: Sponsor rank -->
   <div class="mb-4 mt-10 flex flex-col">
@@ -156,7 +191,7 @@ const patrons = [
           />
         );
         return (
-          <div class="card w-56 bg-white">
+          <div class="card bg-white md:w-32 lg:w-48">
             <figure class="my-4 p-5">
               {patron.url ? (
                 <a href={patron.url} target="_blank" rel="noopener noreferrer">

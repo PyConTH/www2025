@@ -29,10 +29,10 @@ const menus: MenuType[] = [
     name: "Schedule",
     link: "/schedule",
   },
-  // {
-  //   name: 'Venue',
-  //   link: '/venue',
-  // },
+  {
+    name: "Venue",
+    link: "/venue",
+  },
   // {
   //   name: 'Sponsor',
   //   hrefLink: '/#sponsor',

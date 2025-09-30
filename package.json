@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/react": "^4.3.0",
+    "@astrojs/react": "^4.4.0",
     "@astrojs/tailwind": "^6.0.2",
     "@iconify-json/material-symbols": "^1.2.35",
     "@iconify-json/mdi": "^1.2.3",
@@ -20,7 +20,7 @@
     "@iconify-json/solar": "^1.2.4",
     "@iconify-json/uil": "^1.2.3",
     "animejs": "^3.2.2",
-    "astro": "^5.8.1",
+    "astro": "^5.14.1",
     "react": "^18.2.0",
     "react-cookie-consent": "^9.0.0",
     "react-dom": "^18.2.0",

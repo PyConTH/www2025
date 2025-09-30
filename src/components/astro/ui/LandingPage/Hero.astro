@@ -5,6 +5,40 @@ import AnimatedHeroSvgSideStar from "@components/react/ui/LandingPage/AnimatedHe
 import AnimatedHeroSvgSideTukTuk from "@components/react/ui/LandingPage/AnimatedHeroSvg/AnimatedHeroSvgSideTukTuk";
 import { socials } from "@/constants";
 import { Icon } from "astro-icon/components";
+
+function buildCalendarLink({ title, location, details, start, end }) {
+  const baseUrl = "https://calendar.google.com/calendar/u/0/r/eventedit?";
+  const params = new URLSearchParams({
+    text: title,
+    location: location,
+    details: details,
+    dates: `${start}/${end}`,
+  });
+
+  return baseUrl + params.toString();
+}
+
+const workshopCalendarText = `PyCon Thailand 2025 - Workshop
+Microsoft (Thailand) Limited
+
+Maps: https://maps.app.goo.gl/M4YJbNTr6TBDAEhf7
+`;
+
+const workshopCalendarLink = buildCalendarLink({
+  title: "PyCon Thailand 2025",
+  location: "One Bangkok Tower 4",
+  details: workshopCalendarText,
+  start: "20251017T020000Z",
+  end: "20251017T100000Z",
+});
+
+const conferenceCalendarLink = buildCalendarLink({
+  title: "PyCon Thailand 2025",
+  location: "Avani Sukhumvit Bangkok",
+  details: "PyCon Thailand 2025 - Conference",
+  start: "20251018T020000Z",
+  end: "20251018T100000Z",
+});
 ---
 
 <div class="grid min-h-[40vh] grid-cols-1 md:grid-cols-5">
@@ -53,7 +87,7 @@ import { Icon } from "astro-icon/components";
             <!-- Workshop Info -->
             <a
               target="_blank"
-              href={`https://calendar.google.com/calendar/u/0/r/eventedit?text=PyCon+Thailand+2025&dates=20251017T020000Z/20251017T100000Z&details=PyCon+Thailand+2025+-+Workshop&location=Microsoft+(Thailand)+Limited`}
+              href={workshopCalendarLink}
               class="flex items-center gap-4 rounded-lg bg-white p-4 shadow-md transition duration-300 hover:scale-105"
             >
               <Icon name="logos:google-calendar" width="26" height="26" />
@@ -64,7 +98,7 @@ import { Icon } from "astro-icon/components";
             <!-- Conference Info -->
             <a
               target="_blank"
-              href={`https://www.google.com/calendar/event?action=TEMPLATE&text=PyCon Thailand 2025&dates=20251018T020000Z/20251018T100000Z&details=PyCon Thailand 2025 - Conference&location=Avani Sukhumvit Bangkok`}
+              href={conferenceCalendarLink}
               class="flex items-center gap-4 rounded-lg bg-white p-4 shadow-md transition duration-300 hover:scale-105"
             >
               <Icon name="logos:google-calendar" width="26" height="26" />

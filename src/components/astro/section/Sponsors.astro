@@ -14,6 +14,15 @@ import MyOrderLogo from "@assets/sponsors/myorder.webp";
 import CreatorsGartenLogo from "@assets/sponsors/creatorsgarten.svg";
 import PacktLogo from "@assets/sponsors/packtpublishing.png";
 import JirachaiMeLogo from "@assets/sponsors/Jirachai-me-Logo.svg";
+import BigDataRPGLogo from "@assets/sponsors/BigData_RPG.webp";
+import BlueOnDataLogo from "@assets/sponsors/Blue_on_Data.webp";
+import BornToDevLogo from "@assets/sponsors/BorntoDev.webp";
+import DataTHLogo from "@assets/sponsors/Data_TH.webp";
+import MilsBlogLogo from "@assets/sponsors/Mils_Blog.webp";
+import NextFlowLogo from "@assets/sponsors/Next_Flow.webp";
+import OSEDALogo from "@assets/sponsors/OSEDA.webp";
+import PyLadiesBangkokLogo from "@assets/sponsors/PyLadies_Bangkok.webp";
+import SparkTechThailandLogo from "@assets/sponsors/Spark_Tech_Thailand.webp";
 
 const patrons = [
   {
@@ -60,6 +69,69 @@ const patrons = [
     height: 100,
     url: "https://blog.jirachai.me",
   },
+];
+
+const communityPartners = [
+  {
+    name: "BigData RPG",
+    logo: BigDataRPGLogo,
+    height: 100,
+    url: "https://bigdatarpg.com",
+  },
+  {
+    name: "Blue on Data",
+    logo: BlueOnDataLogo,
+    height: 100,
+    url: "https://www.youtube.com/@blueondata",
+  },
+  {
+    name: "BorntoDev",
+    logo: BornToDevLogo,
+    height: 100,
+    url: "https://www.borntodev.com",
+  },
+  {
+    name: "Data TH",
+    logo: DataTHLogo,
+    height: 100,
+    url: "https://blog.datath.com",
+  },
+  {
+    name: "Mils' Blog",
+    logo: MilsBlogLogo,
+    height: 100,
+    url: "https://mesodiar.com",
+  },
+  {
+    name: "Next Flow",
+    logo: NextFlowLogo,
+    height: 100,
+    url: "https://nextflow.in.th",
+  },
+  {
+    name: "OSEDA",
+    logo: OSEDALogo,
+    height: 100,
+    url: "https://oseda.or.th",
+  },
+  {
+    name: "PyLadies Bangkok",
+    logo: PyLadiesBangkokLogo,
+    height: 100,
+    url: "https://www.facebook.com/pyladiesbkk",
+  },
+  {
+    name: "Spark Tech Thailand",
+    logo: SparkTechThailandLogo,
+    height: 100,
+    url: "https://www.facebook.com/SparkTechTH",
+  },
+  // {
+  //     name: "ThaiPy",
+  //     logo: ThaiPyLogo,
+  //     height: 100,
+  //     url: "https://www.meetup.com/thaipy-bangkok-python-meetup"
+  // }
 ];
 ---
 
@@ -186,7 +258,7 @@ const patrons = [
   </div>
   <!-- End: Sponsor rank -->
 
-  <div class="flex items-center gap-x-4 max-md:flex-col">
+  <div class="flex w-full items-center justify-between max-md:flex-col">
     {
       patrons.map((patron) => {
         const image = (
@@ -198,10 +270,52 @@ const patrons = [
           />
         );
         return (
-          <div class="card bg-white md:w-32 lg:w-48">
-            <figure class="my-4 p-5">
+          <div class="card bg-white md:w-20 lg:w-40">
+            <figure class="my-4 md:p-1 lg:p-5">
               {patron.url ? (
                 <a href={patron.url} target="_blank" rel="noopener noreferrer">
+                  {image}
+                </a>
+              ) : (
+                <>{image}</>
+              )}
+            </figure>
+          </div>
+        );
+      })
+    }
+  </div>
+
+  <!-- Start: Sponsor rank -->
+  <div class="mb-4 mt-10 flex flex-col">
+    <h2 class="text-center text-2xl font-semibold text-primary">
+      Community Partner
+    </h2>
+    <!-- Separator animation -->
+    <LineSeparator client:load />
+  </div>
+  <!-- End: Sponsor rank -->
+
+  <div class="flex w-full items-center justify-between max-md:flex-col">
+    {
+      communityPartners.map((communityPartner) => {
+        const image = (
+          <Image
+            src={communityPartner.logo}
+            height={communityPartner?.height ?? 150}
+            class="items-center"
+            alt={`${communityPartner.name} Logo`}
+          />
+        );
+        return (
+          <div class="card bg-white md:w-20 lg:w-40">
+            <figure class="my-4 md:p-1 lg:p-5">
+              {communityPartner.url ? (
+                <a
+                  href={communityPartner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {image}
                 </a>
               ) : (

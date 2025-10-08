@@ -35,8 +35,8 @@ export const TeamData = [
     name: "Kanin Kearpimy",
     role: "Co-chair",
     image: JamesImage,
-    title: "PhD Student at The University of Melbourne",
-    desc: "Kanin is general practitioner of PyCon Thailand. While he is PhD student at the University of Melbourne.",
+    title: "",
+    desc: "Kanin is general practitioner of PyCon Thailand.",
   },
   {
     name: "Ice Peeranat",

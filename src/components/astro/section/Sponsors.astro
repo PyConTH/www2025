@@ -24,6 +24,8 @@ import OSEDALogo from "@assets/sponsors/OSEDA.webp";
 import PyLadiesBangkokLogo from "@assets/sponsors/PyLadies_Bangkok.webp";
 import SparkTechThailandLogo from "@assets/sponsors/Spark_Tech_Thailand.webp";
 import NaviCatLogo from "@assets/sponsors/Navicat_logo_Landscape.svg";
+import AWSLogo from "@assets/sponsors/AWS_logo_RGB_1c_Gray850.svg";
+import IkigaiLogo from "@assets/sponsors/ikigai-logo-cropped.webp";
 
 const patrons = [
   {
@@ -69,6 +71,12 @@ const patrons = [
     logo: JirachaiMeLogo,
     height: 100,
     url: "https://blog.jirachai.me",
+  },
+  {
+    name: "Ikigai",
+    logo: IkigaiLogo,
+    height: 100,
+    url: "https://www.ikigaidigital.io",
   },
 ];
 
@@ -206,6 +214,24 @@ const communityPartners = [
   <!-- End : Python Software Foundation -->
 
   <!-- Start: Sponsor rank -->
+
+  <!-- Start Platinum -->
+  <h2 class="mb-4 mt-10 text-2xl font-semibold text-primary">Platinum</h2>
+  <div class="flex items-center gap-x-4 max-md:flex-col">
+    <div class="card mb-4 w-56 bg-base-100 shadow-xl">
+      <figure class="p-5">
+        <a
+          href="https://aws.amazon.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image src={AWSLogo} height={150} class="items-center" alt="AWS" />
+        </a>
+      </figure>
+    </div>
+  </div>
+  <!-- End Platinum -->
+
   <div class="mb-4 mt-10 flex flex-col">
     <h2 class="text-center text-2xl font-semibold text-primary">Gold</h2>
     <!-- Separator animation -->

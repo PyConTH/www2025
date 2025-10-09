@@ -23,6 +23,7 @@ import NextFlowLogo from "@assets/sponsors/Next_Flow.webp";
 import OSEDALogo from "@assets/sponsors/OSEDA.webp";
 import PyLadiesBangkokLogo from "@assets/sponsors/PyLadies_Bangkok.webp";
 import SparkTechThailandLogo from "@assets/sponsors/Spark_Tech_Thailand.webp";
+import NaviCatLogo from "@assets/sponsors/Navicat_logo_Landscape.svg";
 
 const patrons = [
   {
@@ -71,6 +72,26 @@ const patrons = [
   },
 ];
 
+const silver = [
+  {
+    name: "DataRockie",
+    logo: DataRockieLogo,
+    height: 150,
+    url: "https://datarockie.com",
+  },
+  {
+    name: "MyOrder",
+    logo: MyOrderLogo,
+    height: 150,
+    url: "https://myorder.ai",
+  },
+  {
+    name: "Navicat",
+    logo: NaviCatLogo,
+    height: 150,
+    url: "https://www.navicat.com",
+  },
+];
 const communityPartners = [
   {
     name: "BigData RPG",
@@ -220,34 +241,22 @@ const communityPartners = [
   <!-- End: Sponsor rank -->
 
   <div class="flex items-center gap-x-4 max-md:flex-col">
-    <div class="card w-56 bg-white">
-      <figure class="my-4 p-5">
-        <a
-          href="https://datarockie.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src={DataRockieLogo}
-            height={150}
-            class="items-center"
-            alt="DataRockie"
-          />
-        </a>
-      </figure>
-    </div>
-    <div class="card w-56 bg-white">
-      <figure class="my-4 p-5">
-        <a href="https://myorder.ai" target="_blank" rel="noopener noreferrer">
-          <Image
-            src={MyOrderLogo}
-            height={150}
-            class="items-center"
-            alt="MyOrder"
-          />
-        </a>
-      </figure>
-    </div>
+    {
+      silver.map((item) => (
+        <div class="card w-56 bg-white">
+          <figure class="my-4 p-5">
+            <a href={item.url} target="_blank" rel="noopener noreferrer">
+              <Image
+                src={item.logo}
+                height={150}
+                class="items-center"
+                alt="DataRockie"
+              />
+            </a>
+          </figure>
+        </div>
+      ))
+    }
   </div>
 
   <!-- Start: Sponsor rank -->

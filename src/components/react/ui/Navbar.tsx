@@ -2,7 +2,6 @@ import { useState } from "react";
 
 import { Icon } from "@iconify/react";
 import { navigate } from "astro:transitions/client";
-import BuyTicketButton from "../common/BuyTicketButton";
 
 type MenuType = {
   name: string;
@@ -146,7 +145,7 @@ const Navbar = () => {
 
           <div className="inline-block lg:hidden">
             <div className="flex">
-              <BuyTicketButton />
+              {/* <BuyTicketButton /> */}
               <button
                 className="flex items-center px-3 py-2"
                 onClick={toggleOpenMobileNav}
@@ -164,7 +163,7 @@ const Navbar = () => {
         <div className={`flex items-center gap-x-8 text-black max-lg:hidden`}>
           {/* Menu render */}
           {listMenu()}
-          <BuyTicketButton />
+          {/* <BuyTicketButton /> */}
         </div>
 
         <div

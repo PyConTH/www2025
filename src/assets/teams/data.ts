@@ -49,8 +49,7 @@ export const TeamData = [
     name: "Natworpong Loyswai",
     role: "Logistic",
     image: NatworpongImage,
-    title:
-      "Chief Technoloy Officer at SHIPPUSU CO., LTD., Cybersecurity Consultant at CYNIUS Cybertech and Consulting",
+    title: "Cybersecurity Consultant at CYNIUS Cybertech and Consulting",
     desc: "Natworpong is the Chief Technoloy Officer at SHIPPUSU CO., LTD. and a Cybersecurity Consultant at CYNIUS Cybertech and Consulting.",
   },
   {
